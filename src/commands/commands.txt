@@ -1,0 +1,8 @@
+Команды для бота. Также задаются у @BotFather
+
+start - Запустить бота
+add_layout - Добавить макет
+remove_layout - Удалить макет
+my_layouts - Показать мои макеты
+settings - Настройки
+help - Помощь

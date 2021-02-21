@@ -1,0 +1,26 @@
+import {
+  ADD_LAYOUT_BUTTON,
+  REMOVE_LAYOUT_BUTTON,
+  REMOVE_ALL_LAYOUTS_BUTTON,
+  MY_LAYOUTS_BUTTON,
+  SETTINGS_BUTTON,
+  HELP_BUTTON,
+  BACK_BUTTON,
+} from './buttons';
+import { Markup } from 'telegraf';
+
+export const MAIN_KEYBOARD_LAYOUT = [
+  [ADD_LAYOUT_BUTTON],
+  [MY_LAYOUTS_BUTTON, REMOVE_LAYOUT_BUTTON],
+  [SETTINGS_BUTTON, HELP_BUTTON],
+];
+
+export const BACK_KEYBOARD_LAYOUT = [BACK_BUTTON];
+
+export const MAIN_KEYBOARD = Markup.keyboard(MAIN_KEYBOARD_LAYOUT).resize();
+
+export const BACK_KEYBOARD = Markup.keyboard(BACK_KEYBOARD_LAYOUT).resize();
+
+export const REMOVE_ALL_LAYOUTS_KEYBOARD = Markup.keyboard([
+  [REMOVE_ALL_LAYOUTS_BUTTON, BACK_BUTTON],
+]).resize();

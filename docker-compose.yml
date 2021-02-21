@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  db:
+    image: mongo:latest
+    container_name: figma-version-bot-db
+    volumes:
+      - mongodb:/data/db
+    networks:
+      - figma-version-bot-network
+
+  bot:
+    build: ./
+    container_name: figma-version-bot
+    command: yarn start
+    env_file:
+      - .env
+    depends_on:
+      - db
+    networks:
+      - figma-version-bot-network
+
+volumes:
+  mongodb:
+
+networks:
+  figma-version-bot-network:
+    driver: bridge

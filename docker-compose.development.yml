@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  bot:
+    command: yarn dev
+    volumes:
+      - ./src:/usr/src/app/src
